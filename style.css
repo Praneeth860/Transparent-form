@@ -1,0 +1,111 @@
+:root {
+  --background-img: url(./images/background-image.jpg);
+  --font-family: ;
+  --font-size-heading: 2.2rem;
+  --font-size-subheading: 1.125rem;
+  --font-size-test: x-small;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-image: var(--background-img);
+  min-height: 100svh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.container {
+  border-radius: 20px;
+  min-width: min(80%, 600px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  opacity: 0.7;
+  box-shadow: 0 0 4px 1px black;
+}
+
+form {
+  /* border: 2px solid black; */
+  margin: 4%;
+  margin-top: 9%;
+  color: white;
+  min-height: 300px;
+  display: flex;
+  font-family: "Roboto", "Arial", sans-serif;
+  flex-direction: column;
+  font-size: var(--font-size-subheading);
+}
+h6 {
+  text-align: center;
+  cursor: default;
+  font-size: var(--font-size-heading);
+}
+.password {
+  border: 1.6px solid red;
+  outline: none;
+}
+input {
+  background-color: rgb(65, 67, 67);
+  color: white;
+  margin-top: 5px;
+  outline: none;
+  border-radius: 5px;
+  min-height: 40px;
+  border: 1.6px solid green;
+}
+
+button {
+  background-color: rgb(14, 59, 91);
+  margin-top: 30px;
+  color: white;
+  border-radius: 6px;
+  min-height: 40px;
+  border: 1px solid rgb(5, 92, 143);
+}
+input:focus {
+  border: none;
+  box-shadow: 0 0 0 1px hsl(200, 100%, 50%);
+}
+input ~ p {
+  font-size: var(--font-size-test);
+}
+#email + p {
+  margin: 5px 0;
+  color: green;
+}
+#password + p {
+  color: red;
+  margin: 5px 0;
+}
+label {
+  cursor: pointer;
+}
+label[for="email"] {
+  margin-top: 20px;
+}
+label[for="password"] {
+  margin-top: 20px;
+}
+button:hover {
+  background-color: rgb(31, 126, 194);
+  cursor: pointer;
+}
